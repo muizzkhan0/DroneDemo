@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fcc9e360-414d-4e9e-be82-58ca8d75841b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>DroneDemo.py</StartupFile>
+    <StartupFile>KeyboardPlusVideo.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,7 +23,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DroneDemo.py" />
+    <Compile Include="KeyboardPlusVideo.py" />
+    <Compile Include="VideoStream.py" />
+    <Compile Include="KeyboardControl.py" />
+    <Compile Include="KeyboardControlModule.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.12" />
