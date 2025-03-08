@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fcc9e360-414d-4e9e-be82-58ca8d75841b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>KeyboardPlusVideo.py</StartupFile>
+    <StartupFile>CNNModel.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CNNModel.py" />
     <Compile Include="KeyboardPlusVideo.py" />
     <Compile Include="VideoStream.py" />
     <Compile Include="KeyboardControl.py" />
