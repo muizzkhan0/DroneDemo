@@ -1,4 +1,3 @@
-from tracemalloc import take_snapshot
 from djitellopy import Tello
 import KeyboardControlModule as kp
 from time import sleep
