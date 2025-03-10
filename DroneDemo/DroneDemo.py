@@ -9,7 +9,7 @@ height = 240 # width and height of the image
 
 # Connecting to the drone
 drone = Tello()
-drone.connect() 
+drone.connect()
 
 print(drone.get_battery())
 
@@ -22,5 +22,6 @@ while True:
     cv2.imshow("Camera Feed", myFrame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+    print(drone.get_pitch())
 cv2.destroyAllWindows()
 drone.end()
