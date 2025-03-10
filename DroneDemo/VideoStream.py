@@ -11,7 +11,7 @@ height = 240 # width and height of the image
 drone = Tello()
 drone.connect() 
 
-print(drone.get_battery())
+print("Current Battery Level: ", drone.get_battery())
 
 drone.streamon()
 

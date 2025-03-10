@@ -73,10 +73,6 @@ H = model.fit(train, batch_size=BS,
               validation_data=val,
               epochs=EPOCHS, verbose=1)
 
-# save the model to disk
-#print("[INFO] serializing network...")
-#model.save("model")
-
 # Plot the training accuracy and loss
 plt.figure()
 plt.plot(H.history["accuracy"], label="train_acc")
@@ -87,6 +83,7 @@ plt.ylabel("Accuracy")
 plt.legend()
 plt.show()
 
+print("TRAINING COMPLETE------------")
 #evaluating the model after training
 test_loss, test_acc = model.evaluate(test)
 print(test_acc)

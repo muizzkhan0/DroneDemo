@@ -1,4 +1,4 @@
-
+from tracemalloc import take_snapshot
 from djitellopy import Tello
 import KeyboardControlModule as kp
 import time
