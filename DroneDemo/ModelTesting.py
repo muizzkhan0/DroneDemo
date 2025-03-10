@@ -21,13 +21,3 @@ while num <= 5:
     print(f"Predicted Class for IMG_{num}.JPG: {class_labels[index]}")
     num += 1
     
-"""
-img = cv2.imread('Test_Data/IMG_6365.JPG')
-resize = tf.image.resize(img, (256,256))
-
-yhat = new_model.predict(np.expand_dims(resize/255, 0))
-index = np.argmax(yhat)
-print(class_labels[index])
-
-plt.imshow(resize.numpy().astype(int))
-plt.show() """
