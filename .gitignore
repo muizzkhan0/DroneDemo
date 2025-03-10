@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/DroneDemo/Sorted_Images
+/DroneDemo/Test_Data
+*.h5
+/DroneDemo/Sorted Images-20250310T043753Z-001.zip
+/DroneDemo/Test Data-20250310T041047Z-001.zip

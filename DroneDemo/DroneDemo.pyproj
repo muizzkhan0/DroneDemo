@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fcc9e360-414d-4e9e-be82-58ca8d75841b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>CNNModel.py</StartupFile>
+    <StartupFile>ModelTesting.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,7 @@
   <ItemGroup>
     <Compile Include="CNNModel.py" />
     <Compile Include="KeyboardPlusVideo.py" />
+    <Compile Include="ModelTesting.py" />
     <Compile Include="VideoStream.py" />
     <Compile Include="KeyboardControl.py" />
     <Compile Include="KeyboardControlModule.py" />
