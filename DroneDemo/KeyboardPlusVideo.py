@@ -1,7 +1,9 @@
+from tracemalloc import take_snapshot
 from djitellopy import Tello
 import KeyboardControlModule as kp
-from time import sleep
+import time
 import cv2
+
 
 # Connecting to the drone
 drone = Tello()
@@ -18,6 +20,7 @@ height = 240
 
 # Controlling the initial state
 takeoff = False
+
 
 def getKeyInput():
     l_r, f_b, u_d, yaw = 0, 0, 0, 0
@@ -54,14 +57,19 @@ def getKeyInput():
 while True:
     values = getKeyInput()
 
-    # Only send controls if drone has taken off
-    drone.send_rc_control(values[0], values[1], values[2], values[3])
+    # Uncomment to send controls to drone
+    #drone.send_rc_control(values[0], values[1], values[2], values[3]) 
 
     # Displaying video stream
     myFrame = drone.get_frame_read().frame
     img = cv2.cvtColor(myFrame, cv2.COLOR_BGR2RGB)
-    img = cv2.resize(img, (width, height))
     cv2.imshow("Camera Feed", img)
+    
+    # Capturing frames from the video stream
+    if(kp.getKey("x")):
+        cv2.imwrite(f'Resources/Images/{time.time()}.jpg', img)
+
+
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
