@@ -1,9 +1,12 @@
-from tracemalloc import take_snapshot
+
 from djitellopy import Tello
+from tensorflow.keras.models import load_model
+import numpy as np
 import KeyboardControlModule as kp
 import time
 import cv2
 
+new_model = load_model("model.h5")
 
 # Connecting to the drone
 drone = Tello()
@@ -64,6 +67,24 @@ while True:
     myFrame = drone.get_frame_read().frame
     img = cv2.cvtColor(myFrame, cv2.COLOR_BGR2RGB)
     cv2.imshow("Camera Feed", img)
+
+    # resize input image
+    resized_img = tf.image.resize(img, (256,256))
+    # predict using the model
+    prediction = new_model.predict(np.expand_dims(resized_img/255,0))
+    # add if statements for handling the prediction
+    if(prediction < 0.16):
+        print(f'Class 1: {prediction}')
+    if(prediction > 0.16 & prediction < 0.33):
+        print(f'Class 2: {prediction}')
+    if(prediction > 0.33 & prediction < 0.497):
+        print(f'Class 3: {prediction}')
+    if(prediction > 0.497 & prediction < 0.663):
+        print(f'Class 4: {prediction}')
+    if(prediction > 0.663 & prediction < 0.83):
+        print(f'Class 5: {prediction}')
+    if(prediction > 0.83 & prediction < 1):
+        print(f'Class 6: {prediction}')
     
     # Capturing frames from the video stream
     if(kp.getKey("x")):
