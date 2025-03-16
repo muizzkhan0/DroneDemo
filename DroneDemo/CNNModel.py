@@ -84,6 +84,8 @@ plt.ylabel("Accuracy")
 plt.legend()
 plt.show()
 
+model.save("model.h5")
+
 print("TRAINING COMPLETE------------")
 #evaluating the model after training
 test_loss, test_acc = model.evaluate(test)
