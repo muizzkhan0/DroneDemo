@@ -361,8 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/DroneDemo/IMG_6624.jpg
+/DroneDemo/model.h5
+/DroneDemo/Sorted Images-20250307T195814Z-001.zip
+/DroneDemo/Resources
 /DroneDemo/Sorted_Images
-/DroneDemo/Test_Data
-*.h5
-/DroneDemo/Sorted Images-20250310T043753Z-001.zip
-/DroneDemo/Test Data-20250310T041047Z-001.zip
+/DroneDemo/DroneDemo.pyproj
